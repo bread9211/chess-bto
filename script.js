@@ -5,8 +5,11 @@ var moveUser;
 var color = "";
 var win = ""
 var botColor = "";
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('output').innerHTML = `<pre>${chess.ascii()}</pre>`; 
+    // document.getElementById('output').innerHTML = `<pre>${chess.ascii()}</pre>`; 
     $("#first").submit(function(e){
         color = document.querySelector("#color").value;
         document.querySelector("#choice").style.display = "none";
@@ -20,7 +23,6 @@ document.addEventListener('DOMContentLoaded', function () {
         {
             botColor = "Black";
         }
-        document.querySelector("#botC").innerHTML = "Bot Color: " + botColor;
         e.preventDefault();
     })   
     $("#form").submit(function(e){
@@ -35,9 +37,9 @@ document.addEventListener('DOMContentLoaded', function () {
             }
             else
             {
-                document.getElementById('output').innerHTML = `<pre>${chess.ascii()}</pre>`;
+                // document.getElementById('output').innerHTML = `<pre>${chess.ascii()}</pre>`;
                 var win = chessMove();
-                document.getElementById('output').innerHTML = `<pre>${chess.ascii()}</pre>`;
+                // document.getElementById('output').innerHTML = `<pre>${chess.ascii()}</pre>`;
                 if(chess.isGameOver())
                 {
                     win = botColor;
@@ -87,6 +89,7 @@ function chessMove()
     const moves = chess.moves()
     const move = moves[Math.floor(Math.random() * moves.length)]
     var win = chess.move(move);
+    window.updateBoard(chess.fen())
     // document.getElementById('output').innerHTML = `<pre>${chess.ascii()}</pre>`; 
     
     document.querySelector("#compMove").innerHTML = "Bot moved: " + move;   

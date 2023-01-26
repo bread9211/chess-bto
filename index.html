@@ -8,6 +8,10 @@
         <script type = "module" src = "script.js"></script>
         
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        <script src="/js/chessboard-1.0.0.min.js"></script>
+
+        <link rel="stylesheet" href="/css/chessboard-1.0.0.min.css">
     </head>
     <body style="background-color: #C4A484; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande';">
         <h1 style="text-align: center; margin-top: 10px;">Chess Bot</h1>
@@ -31,13 +35,13 @@
             </form>
             <div id = "error" style="display: none; color: red;">Invalid move, enter another move</div>
             <p id = "botC" style = "text-align: center;"></p>
-            <p style = "text-align: center; color: black;">Black</p>
             <div id="board1" style="width: 400px"></div>
             <br>
-            <p style = "text-align: center; color: white;">White</p>
             <div id = "compMove" style="text-align: center;"></div><br>
             <div id = "winner" style="text-align: center;"></div>
         </div>
         
+
+        <script src="/chessboardHandler.js"></script>
     </body>
 </html>
