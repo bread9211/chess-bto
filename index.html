@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Chess Bot</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <script>var exports = {};</script>
+        <script src="chess.js" type="module"></script>
+        <script type = "module" src = "script.js"></script>
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </head>
+    <body style="background-color: #C4A484; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande';">
+        <h1 style="text-align: center; margin-top: 10px;">Chess Bot</h1>
+        <div id="choice">
+            <form id="first" style="margin: 10px">
+                What color would you like to be? 
+                <select id = "color">
+                    <option value="" selected="true" disabled="disabled">Color</option>
+                    <option value = "White">White</option>
+                    <option value = "Black">Black</option>
+                </select><br>
+                <input type = "submit" id = "submit1" class = "btn btn-primary">
+            </form>
+        </div><br>
+        <div id="after" style="display: none;">
+            <form id = "form">
+                <div style = "margin-left: 50px"></div>
+                    Enter your move in SAN notation: <input type = "text" id = "move" style = "width: 250px; margin-bottom: 5px" placeholder = "Enter your move"> <br>
+                    <input type = "submit" id = "submit" class = "btn btn-primary">
+                </div>
+            </form>
+            <div id = "error" style="display: none; color: red;">Invalid move, enter another move</div>
+            <p id = "botC" style = "text-align: center;"></p>
+            <p style = "text-align: center; color: black;">Black</p>
+            <div id="board1" style="width: 400px"></div>
+            <br>
+            <p style = "text-align: center; color: white;">White</p>
+            <div id = "compMove" style="text-align: center;"></div><br>
+            <div id = "winner" style="text-align: center;"></div>
+        </div>
+        
+    </body>
+</html>
