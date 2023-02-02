@@ -145,11 +145,12 @@ function onMouseoutSquare(square, piece) {
 };
 
 function removeGreySquares() {
-    $('#board .square-55d63').css('background', '');
+    $('#board1 .square-55d63').css('background', '');
 };
 
 function greySquare(square) {
-    var squareEl = $('#board .square-' + square);
+    var squareEl = $('#board1 .square-' + square);
+    console.log(squareEl)
 
     var background = '#a9a9a9';
     if (squareEl.hasClass('black-3c85d') === true) {
