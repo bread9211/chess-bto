@@ -74,7 +74,6 @@ document.addEventListener('DOMContentLoaded', function () {
     //     }
     //     e.preventDefault();
     // })  
-    
 });
 
 
@@ -103,7 +102,7 @@ function onDragStart (source, piece, position, orientation) {
         piece.search(/^b/) !== -1) {
         return false;
     }
-};
+}
 
 function onDrop (source, target) {
     var move = chess.move({
@@ -133,7 +132,7 @@ function onMouseoverSquare(square, piece) {
     if (moves.length === 0) return;
 
     greySquare(square);
-    
+
     for (var i = 0; i < moves.length; i++) {
         greySquare(moves[i].to);
     }
