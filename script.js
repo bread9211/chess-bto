@@ -106,7 +106,6 @@ function onDragStart (source, piece, position, orientation) {
 };
 
 function onDrop (source, target) {
-
     var move = chess.move({
         from: source,
         to: target,
